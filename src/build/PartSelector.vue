@@ -17,7 +17,7 @@ function getNextValidIndex(index, length) {
   return incrementedIndex > length - 1 ? 0 : incrementedIndex;
 }
 export default {
-  props: ['parts', 'position'],
+  props: {parts: { type: Array }, position: {type: String } },
   data() {
     return { selectedPartIndex: 0 };
   },
