@@ -2,15 +2,20 @@
 <div class='content'>
   <button type="button" class='add-to-cart' @click="addToCart()" name="button">Add to Cart</button>
   <div class="top-row">
-    <PartSelector :parts="availableParts.heads" position="top" />
+    <PartSelector :parts="availableParts.heads" position="top"
+    @partSelected="part => selectedRobot.head = part" />
   </div>
   <div class="middle-row">
-    <PartSelector :parts="availableParts.arms" position="left"/>
-    <PartSelector :parts="availableParts.torsos" position="center"/>
-    <PartSelector :parts="availableParts.arms" position="right" />
+    <PartSelector :parts="availableParts.arms" position="left"
+    @partSelected="part => selectedRobot.leftArm = part" />
+    <PartSelector :parts="availableParts.torsos" position="center"
+    @partSelected="part => selectedRobot.torso = part" />
+    <PartSelector :parts="availableParts.arms" position="right"
+     @partSelected="part => selectedRobot.rightArm = part" />
   </div>
   <div class="bottom-row">
-    <PartSelector :parts="availableParts.bases" position="bottom" />
+    <PartSelector :parts="availableParts.bases" position="bottom"
+    @partSelected="part => selectedRobot.base = part" />
   </div>
   <div class="">
     <h1>Cart</h1>
@@ -39,7 +44,7 @@ import PartSelector from './PartSelector.vue';
 
 export default {
   name: 'RobotBuilder',
-  components: { PartSelector }, //list components to be used as children here
+  components: { PartSelector }, // list components to be used as children here
   data() {
     return {
       availableParts,
