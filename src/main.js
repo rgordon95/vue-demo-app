@@ -1,8 +1,8 @@
-/*jshint esversion: 6*/
+/* jshint esversion: 6 */
 import Vue from 'vue';
 import App from './App.vue';
 
-import router from './router/index.js';
+import router from './router/index';
 
 Vue.config.productionTip = false;
 
