@@ -6,7 +6,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    cart: [], //always initialize stuff here so vue can watch for it
+    cart: [], // always initialize stuff here so vue can watch for it
   },
   mutations: {
     addRobotToCart(state, robot) {
