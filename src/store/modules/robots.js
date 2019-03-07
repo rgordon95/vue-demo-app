@@ -2,6 +2,7 @@
 import axios from 'axios';
 
 export default {
+  namespaced: true,
   state: {
     cart: [], // always initialize stuff here so vue can watch for it
     parts: null,
