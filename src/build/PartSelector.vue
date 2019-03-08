@@ -3,7 +3,7 @@
     <img @click="showPartInfo()" :src="selectedPart.src" title="arm"/>
     <button @click="selectPreviousPart()" class="prev-selector"></button>
     <button @click="selectNextPart()" class="next-selector"></button>
-    <span v-pin class="sale" v-show="selectedPart.onSale">Sale!</span>
+    <span v-pin:position.bottom.left class="sale" v-show="selectedPart.onSale">Sale!</span>
   </div>
 </template>
 
