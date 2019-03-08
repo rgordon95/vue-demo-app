@@ -37,6 +37,7 @@
 </template>
 
 <script>
+// import { mapState } from 'vuex'; // for renaming state module stuff object syntax
 
 export default {
   name: 'app',

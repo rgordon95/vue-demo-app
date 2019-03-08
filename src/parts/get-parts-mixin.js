@@ -4,7 +4,7 @@ export default {
     this.$store.dispatch('robots/getParts');
   },
   computed: {
-    parts () {
+    parts() {
       return this.$store.state.robots.parts || {
         heads: [],
         arms: [],

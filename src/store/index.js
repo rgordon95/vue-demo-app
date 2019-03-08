@@ -8,8 +8,12 @@ import usersModule from './modules/users';
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-modules: {
-  robots: robotsModule,
-  users: usersModule,
-}
+  state: {
+  },
+  modules: {
+    robots: robotsModule,
+    users: usersModule,
+  },
+  getters: {
+  },
 });
